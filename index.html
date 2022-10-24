@@ -12,35 +12,40 @@
 
 <body>
     <div class="container">
-        <h4 class="appname">TODO LIST</h4>
-        <i>“Subtracting from your list of priorities is as important as adding to it.”</i>
+        <div class="intro">
+            <h4 class="appname">TODO LIST</h4>
+            <i>“Subtracting from your list of priorities is as important as adding to it.”</i>
+        </div>
 
 
-        <form>
-            <input type="text" class="todo-input" />
-            <button class="todo-button" type="submit">
-        <i class="fas fa-plus-square"></i>
-      </button>
-            <div class="select">
-                <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+        <div class="inform">
+            <div>
+                <form>
+
+                    <input type="text" class="todo-input" />
+                    <button class="todo-button" type="submit">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                    </div>
+                </form>
             </div>
-        </form>
-        <div class="todo-container">
-            <ul class="todo-list"></ul>
-        </div>
+            <h3 class="ttext">Tasks</h3>
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>
+            <div id="tasks">
 
-
-
-
-        <h5 class="ttext">Tasks</h5>
-
-        <div id="tasks">
+            </div>
 
         </div>
+
     </div>
 </body>
 <script src="app.js"></script>
