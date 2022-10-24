@@ -143,7 +143,6 @@
     }
     
     .fall {
-        transform: translateY(10rem) rotateZ(20deg);
         opacity: 0;
     }
     
