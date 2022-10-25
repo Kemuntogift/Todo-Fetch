@@ -111,7 +111,12 @@ function removeLocalTodos(todo) {
 function getTodos() {
     let todos;
     if (localStorage.getItem("todos") === null) {
-        todos = [];
+        function getData() {
+            fetch("https://jsonplaceholder.typicode.com/todos")
+                .then((res) => res.json())
+                .then((data) => console.log(data));
+        }
+        getData();
     } else {
         todos = JSON.parse(localStorage.getItem("todos"));
     }
@@ -142,6 +147,52 @@ function getTodos() {
 
 
 // FETCH
-fetch("https://jsonplaceholder.typicode.com/todos")
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+// const fetchData = () => {
+//     const fetchedData = ("https://jsonplaceholder.typicode.com/todos")
+//         .then((response) => response.json())
+//         .then((json) => {
+//             r
+
+// showTodos = (data_todos) => {
+//         const todosHTML = data_todos
+//             .map(
+//                 (todo) => `  showTodos = (data_todos) => {
+//         const todosHTML = data_todos
+//             .map(
+//                 (todo) => `
+//     <div class="sthrough" id=${y}>
+// 
+// <span class = "fw-bold" > $ { x.text } < /span> 
+// span class = "options" >
+//     <input type = "checkbox"
+// id = "click"
+// onClick = "strikeThrough(this)" > <i onClick = "deleteTask(this);createTasks()"
+// class = "fas fa-trash-alt" > < /i> <
+//     /span> </div>
+
+//     `
+//             )
+//             .join("");
+
+//         taskContainer.innerHTML = todosMarkup;
+
+//         this.checkCompleted();
+//         this.addingEventListeners();
+//     };
+
+//     addTodo = async(data) => {
+//         const result = await fetch("https://jsonplaceholder.typicode.com/todos", {
+//             method: "POST",
+//             body: JSON.stringify(data),
+//             headers: {
+//                 "Content-type": "application/json",
+//             },
+//         });
+
+//         const todo = await result.json();
+
+//         this.todos.unshift(todo);
+//         localStorage.setItem("stored_todos", JSON.stringify(this.todos.unshift));
+//         this.renderTodos(this.todos);
+//         this.close_open_Form();
+//     };
